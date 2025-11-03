@@ -1,0 +1,28 @@
+#calc{
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 350px;
+  height: 650px;
+  background-color: rgb(228, 220, 212);
+}
+
+#display{
+  margin: 10px 10px;
+  width: 93%;
+  height:55px;
+  font-size: 35px;
+  background-color: beige;
+}
+
+.button{
+  height: 80px;
+  width: 80px;
+  margin: 5px;
+  background-color: rgb(193, 245, 245);
+}
+
+.button-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
