@@ -1,2 +1,2 @@
-let currentDisplay ='23+45';
+let currentDisplay =' ';
 document.querySelector('#display').value = currentDisplay;
