@@ -4,81 +4,142 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
-    <link rel="stylesheet" href="calculator.css" />
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+        font-family: Arial, sans-serif;
+      }
+
+      #calc {
+        width: 270px;
+        background-color: #1f2937;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+        text-align: center;
+      }
+
+      h2 {
+        color: white;
+        margin-bottom: 10px;
+      }
+
+      #display {
+        width: 230px;
+        height: 40px;
+        color: white;
+        background-color: black;
+        font-size: 20px;
+        text-align: right;
+        border: none;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        padding-right: 8px;
+      }
+
+      .button {
+        width: 50px;
+        height: 50px;
+        margin: 4px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        background-color: #374151;
+        color: white;
+        transition: 0.2s;
+      }
+
+      .button:hover {
+        background-color: #4b5563;
+      }
+
+      .button:active {
+        transform: scale(0.95);
+      }
+    </style>
   </head>
   <body>
-    <h2>Calculator Project</h2>
     <div id="calc">
-      <input type="text" id="display" readonly/>
+      <h2>Calculator Project</h2>
+
+      <input type="text" id="display" readonly />
+
       <div class="button-container">
-        <button class="button" onclick="
-        currentDisplay = '';
-        document.querySelector('#display').value = currentDisplay;"><b>C</b></button>
+        <!-- Row 1 -->
+        <button class="button" onclick="currentDisplay += '7'; internalExpression += '7'; document.querySelector('#display').value = currentDisplay;"><b>7</b></button>
+        <button class="button" onclick="currentDisplay += '8'; internalExpression += '8'; document.querySelector('#display').value = currentDisplay;"><b>8</b></button>
+        <button class="button" onclick="currentDisplay += '9'; internalExpression += '9'; document.querySelector('#display').value = currentDisplay;"><b>9</b></button>
+        <button class="button" style="background-color:#f7931a" onclick="currentDisplay=''; internalExpression=''; document.querySelector('#display').value=''"><b>C</b></button>
 
-        <button class="button" onclick="
-        currentDisplay = currentDisplay+'1';
-        document.querySelector('#display').value = currentDisplay;"><b>1</b></button>
+        <!-- Row 2 -->
+        <button class="button" onclick="currentDisplay += '4'; internalExpression += '4'; document.querySelector('#display').value = currentDisplay;"><b>4</b></button>
+        <button class="button" onclick="currentDisplay += '5'; internalExpression += '5'; document.querySelector('#display').value = currentDisplay;"><b>5</b></button>
+        <button class="button" onclick="currentDisplay += '6'; internalExpression += '6'; document.querySelector('#display').value = currentDisplay;"><b>6</b></button>
+        <button class="button" style="background-color:#f7931a" onclick="currentDisplay += '+'; internalExpression += '+'; document.querySelector('#display').value = currentDisplay;"><b>+</b></button>
 
-        <button class="button" onclick="
-        currentDisplay = currentDisplay+'2';
-        document.querySelector('#display').value = currentDisplay;"><b>2</b></button>
+        <!-- Row 3 -->
+        <button class="button" onclick="currentDisplay += '1'; internalExpression += '1'; document.querySelector('#display').value = currentDisplay;"><b>1</b></button>
+        <button class="button" onclick="currentDisplay += '2'; internalExpression += '2'; document.querySelector('#display').value = currentDisplay;"><b>2</b></button>
+        <button class="button" onclick="currentDisplay += '3'; internalExpression += '3'; document.querySelector('#display').value = currentDisplay;"><b>3</b></button>
+        <button class="button" style="background-color:#f7931a" onclick="currentDisplay += '-'; internalExpression += '-'; document.querySelector('#display').value = currentDisplay;"><b>−</b></button>
 
-        <button class="button" onclick="
-        currentDisplay = currentDisplay+'+';
-        document.querySelector('#display').value = currentDisplay;"><b>+</b></button>
+        <!-- Row 4 -->
+        <button class="button" onclick="currentDisplay += '0'; internalExpression += '0'; document.querySelector('#display').value = currentDisplay;"><b>0</b></button>
+        <button class="button" onclick="currentDisplay += '.'; internalExpression += '.'; document.querySelector('#display').value = currentDisplay;"><b>.</b></button>
+        <button class="button" style="background-color:#f7931a" onclick="currentDisplay += '×'; internalExpression += '*'; document.querySelector('#display').value = currentDisplay;"><b>×</b></button>
+        <button class="button" style="background-color:#f7931a" onclick="currentDisplay += '÷'; internalExpression += '/'; document.querySelector('#display').value = currentDisplay;"><b>÷</b></button>
 
-        <button class="button" onclick="
-        currentDisplay = currentDisplay+'3';
-        document.querySelector('#display').value = currentDisplay;"><b>3</b></button>
+        <!-- Row 5 -->
+        <button class="button" style="background-color:#f7931a" onclick="currentDisplay += '%'; internalExpression += '%'; document.querySelector('#display').value = currentDisplay;"><b>%</b></button>
 
-        <button class="button" onclick="
-        currentDisplay = currentDisplay+'4';
-        document.querySelector('#display').value = currentDisplay;"><b>4</b></button>
+        <!-- √ now works at start (default 0) -->
+        <button class="button" style="background-color:#f7931a" 
+          onclick="try{
+            let val=Math.sqrt(internalExpression===''?0:eval(internalExpression));
+            currentDisplay='√(' + (internalExpression===''?'0':currentDisplay) + ')';
+            internalExpression=val.toString();
+            document.querySelector('#display').value=val;
+          }catch(e){
+            document.querySelector('#display').value='Error';
+          }">
+          <b>√</b>
+        </button>
 
-        <button class="button" onclick="
-        currentDisplay = currentDisplay+'-';
-        document.querySelector('#display').value = currentDisplay;"><b>-</b></button>
+        <button class="button" style="background-color:#f7931a" 
+          onclick="try{
+            let val=Math.pow(eval(internalExpression===''?'0':internalExpression),2);
+            currentDisplay='(' + (currentDisplay===''?'0':currentDisplay) + ')²';
+            internalExpression=val.toString();
+            document.querySelector('#display').value=val;
+          }catch(e){
+            document.querySelector('#display').value='Error';
+          }">
+          <b>x²</b>
+        </button>
 
-        <button class="button" onclick="
-        currentDisplay = currentDisplay+'5';
-        document.querySelector('#display').value = currentDisplay;"><b>5</b></button>
-
-        <button class="button" onclick="
-        currentDisplay = currentDisplay+'6';
-        document.querySelector('#display').value = currentDisplay;"><b>6</b></button>
-
-        <button class="button" onclick="
-        currentDisplay = currentDisplay+'*';
-        document.querySelector('#display').value = currentDisplay;"><b>*</b></button>
-
-        <button class="button" onclick="
-        currentDisplay = currentDisplay+'7';
-        document.querySelector('#display').value = currentDisplay;"><b>7</b></button>
-        <button class="button" onclick="
-        currentDisplay = currentDisplay+'8';
-        document.querySelector('#display').value = currentDisplay;"><b>8</b></button>
-
-        <button class="button" onclick="
-        currentDisplay = currentDisplay+'/';
-        document.querySelector('#display').value = currentDisplay;"><b>/</b></button>
-
-        <button class="button" onclick="
-        currentDisplay = eval(currentDisplay);
-        document.querySelector('#display').value = currentDisplay;"><b>=</b></button>
-
-        <button class="button" onclick="
-        currentDisplay = currentDisplay+'9';
-        document.querySelector('#display').value = currentDisplay;"><b>9</b></button>
-
-        <button class="button" onclick="
-        currentDisplay = currentDisplay+'0';
-        document.querySelector('#display').value = currentDisplay;"><b>0</b></button>
-
-        <button class="button" onclick="
-        currentDisplay = currentDisplay+'.';
-        document.querySelector('#display').value = currentDisplay;"><b>.</b></button>
+        <button class="button" style="background-color:#f7931a" 
+          onclick="try{
+            let res=eval(internalExpression===''?'0':internalExpression);
+            currentDisplay=res;
+            internalExpression=res.toString();
+            document.querySelector('#display').value=res;
+          }catch(e){
+            document.querySelector('#display').value='Error';
+          }">
+          <b>=</b>
+        </button>
       </div>
     </div>
-    <script src="script.js"></script>
+
+    <script>
+      let currentDisplay = "";
+      let internalExpression = "";
+    </script>
   </body>
 </html>

@@ -5,25 +5,29 @@ h2 {
 }
 #calc {
   border: 2px solid black;
-  border-radius: 5px;
-  width: 350px;
+  border-radius: 15px;
+  width: 400px;
   height: 650px;
-  background-color: rgb(228, 220, 212);
+  background-color: #2E2E2E;
 }
 
 #display {
   margin: 10px 10px;
   width: 93%;
-  height: 55px;
-  font-size: 35px;
-  background-color: beige;
+  height: 75px;
+  font-size: 45px;
+  background-color: #1A1A1A;
+  border-radius: 15px;
 }
 
 .button {
   height: 80px;
   width: 80px;
   margin: 5px;
-  background-color: rgb(193, 245, 245);
+  background-color: #2E2E2E;
+  border-radius: 15px;
+  font-size: 30px;
+
 }
 
 .button-container {
