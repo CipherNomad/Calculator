@@ -167,29 +167,12 @@ If you find this project useful, please ⭐ **star the repository**.
 Your support motivates further development! 🙌
 
 <br>
-## Custom SVG Badges
+## 📸 Screenshots
 
 <p align="center">
-  <!-- Project title badge (inline SVG) -->
-  <svg xmlns="http://www.w3.org/2000/svg" width="220" height="36" viewBox="0 0 220 36" role="img" aria-label="Advanced Calculator Badge">
-    <title>Advanced Calculator</title>
-    <rect rx="6" ry="6" width="220" height="36" fill="#0f172a" />
-    <rect x="0" y="0" width="60" height="36" rx="6" ry="6" fill="#ef4444" />
-    <text x="36" y="22" font-family="Segoe UI, Roboto, Arial" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="700">⚡</text>
-    <text x="120" y="22" font-family="Segoe UI, Roboto, Arial" font-size="13" fill="#ffffff" text-anchor="middle">Advanced Calculator</text>
-  </svg>
-
- 
-
-  <!-- Author badge (inline SVG) -->
-
-  <svg xmlns="http://www.w3.org/2000/svg" width="200" height="36" viewBox="0 0 200 36" role="img" aria-label="Author Badge">
-    <title>Rahul Raj Singh (CipherNomad)</title>
-    <rect rx="6" ry="6" width="200" height="36" fill="#111827" />
-    <rect x="0" y="0" width="48" height="36" rx="6" ry="6" fill="#2563eb" />
-    <text x="24" y="22" font-family="Segoe UI, Roboto, Arial" font-size="12" fill="#ffffff" text-anchor="middle">👨‍💻</text>
-    <text x="120" y="22" font-family="Segoe UI, Roboto, Arial" font-size="12" fill="#ffffff" text-anchor="middle">Rahul Raj Singh (CipherNomad)</text>
-  </svg>
+  <img src="images/banner.png" alt="Calculator Banner" width="100%" />
+  <br><br>
+  <img src="images/demo.png" alt="Calculator Demo" width="80%" />
 </p>
 
 <br>
