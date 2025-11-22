@@ -1,94 +1,196 @@
-# 🧮 Advanced Calculator Web App
+<p align="center">
+  <img src="images/banner.png" alt="Calculator Banner" width="100%" />
+</p>
 
-A clean and responsive Calculator Web Application built using HTML, CSS, and JavaScript.  
-This project performs basic arithmetic operations with a modern UI and smooth interactions.
+<h1 align="center">🧮 Advanced Calculator Web App</h1>
 
-🔗 Live Demo: https://ciphernomad.github.io/Calculator/  
-📦 Repository: https://github.com/CipherNomad/Calculator  
+<p align="center">
+  A clean, fast, and responsive Calculator built using
+  <b>HTML, CSS, and JavaScript</b>.
+  Perform operations with smooth UI, keyboard support, and error handling.
+</p>
 
----
+<p align="center">
+  <a href="https://ciphernomad.github.io/Calculator/"><b>🎮 Live Demo</b></a> •
+  <a href="https://github.com/CipherNomad/Calculator"><b>📦 Source Code</b></a>
+</p>
 
-## 🚀 Features
-
-✅ Basic arithmetic operations  
-✅ Clean and responsive UI  
-✅ Keyboard input support  
-✅ Error handling  
-✅ Clear and All Clear buttons  
-✅ Lightweight and fast  
-
----
-
-## 🛠️ Tech Stack
-
-- HTML5  
-- CSS3  
-- JavaScript (ES6+)  
+<br>
 
 ---
 
-## 📸 Screenshots
+## 📌 Tech Stack & Badges
 
-<!-- (Add a screenshot once uploaded) -->
+<p align="left">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+  <img src="https://img.shields.io/badge/GitHub%20Pages-327FC7?style=for-the-badge&logo=github&logoColor=white" />
+</p>
 
+---
+
+# 📑 Table of Contents
+
+* [📸 Screenshot](#-screenshot)
+* [✨ Features](#-features)
+* [🚀 Live Demo](#-live-demo)
+* [🛠️ Technologies Used](#️-technologies-used)
+* [📂 Project Structure](#-project-structure)
+* [🔧 Run Locally](#-run-locally)
+* [🌍 Deployment](#-deployment)
+* [🤝 Contributing](#-contributing)
+* [⭐ Support](#-support)
+
+---
+
+## 📸 Screenshot
+
+<p align="center">
+  <img src="images/demo.png" alt="Calculator Screenshot" width="80%">
+</p>
+
+---
+
+## ✨ Features
+
+### 🎨 UI / UX
+
+* Clean and modern design
+* Responsive layout
+* Smooth keypress animations
+* Optimized button grid
+
+### 🧮 Functionality
+
+* Basic arithmetic operations (+, -, ×, ÷)
+* Decimal support
+* Error handling (invalid inputs, division by zero)
+* Keyboard input support
+* Live expression and result display
+
+### 💾 Storage (Optional Future)
+
+* Dark Mode (coming soon)
+* Sound effects
+* Calculation history
+
+---
+
+## 🚀 Live Demo
+
+👉 **Use the Calculator instantly:**
+
+### [https://ciphernomad.github.io/Calculator/](https://ciphernomad.github.io/Calculator/)
+
+---
+
+## 🛠️ Technologies Used
+
+| Technology     | Purpose                  |
+| -------------- | ------------------------ |
+| HTML5          | Base structure           |
+| CSS3           | Design + layout          |
+| JavaScript ES6 | Logic + DOM manipulation |
+| GitHub Pages   | Deployment               |
 
 ---
 
 ## 📂 Project Structure
 
+```txt
 Calculator/
+│── images/
+│   └── banner.png
+│
 │── index.html
 │── style.css
 │── script.js
-└── images/
-
+│── README.md
+```
 
 ---
 
-## 📦 Installation
+## 🔧 Run Locally
 
-1. Clone the repository:
+### 1️⃣ Clone the repository
+
+```bash
 git clone https://github.com/CipherNomad/Calculator.git
+```
 
-yaml
-Copy code
+### 2️⃣ Enter the project directory
 
-2. Open index.html in a browser.
+```bash
+cd Calculator
+```
+
+### 3️⃣ Run the app
+
+Just open the file:
+
+```diff
+index.html
+```
+
+✔ Works in any browser
+✔ No dependencies needed
 
 ---
 
-## 🌟 Roadmap (Future Enhancements)
+## 🌍 Deployment
 
-✅ Better UI (glassmorphism / dark mode)  
-✅ Keyboard shortcuts  
-✅ Sound effects  
+Live URL:
 
-🔜 Stage 2:  
-- Scientific functions (sin, cos, tan, log, √, ^, !, π, e)  
-- History panel  
-- Memory functions (M+, M-, MR, MC)
+### [https://ciphernomad.github.io/Calculator/](https://ciphernomad.github.io/Calculator/)
 
-🔜 Stage 3:  
-- Voice control  
-- Graph plotting  
-- Unit converter  
-- PWA (installable)  
+To update your live build:
+
+```bash
+git add .
+git commit -m "update"
+git push
+```
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome. Fork the repo and submit a pull request.
+Contributions are welcome!
+Feel free to open an issue or submit a pull request.
 
 ---
 
-## 📄 License
+## ⭐ Support
 
-MIT License
+If you find this project useful, please ⭐ **star the repository**.
+Your support motivates further development! 🙌
 
----
+<br>
+## Custom SVG Badges
 
-## 💡 Author
+<p align="center">
+  <!-- Project title badge (inline SVG) -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="220" height="36" viewBox="0 0 220 36" role="img" aria-label="Advanced Calculator Badge">
+    <title>Advanced Calculator</title>
+    <rect rx="6" ry="6" width="220" height="36" fill="#0f172a" />
+    <rect x="0" y="0" width="60" height="36" rx="6" ry="6" fill="#ef4444" />
+    <text x="36" y="22" font-family="Segoe UI, Roboto, Arial" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="700">⚡</text>
+    <text x="120" y="22" font-family="Segoe UI, Roboto, Arial" font-size="13" fill="#ffffff" text-anchor="middle">Advanced Calculator</text>
+  </svg>
 
-**Rahul Raj Singh (CipherNomad)**  
-GitHub: https://github.com/CipherNomad
+ 
+
+  <!-- Author badge (inline SVG) -->
+
+  <svg xmlns="http://www.w3.org/2000/svg" width="200" height="36" viewBox="0 0 200 36" role="img" aria-label="Author Badge">
+    <title>Rahul Raj Singh (CipherNomad)</title>
+    <rect rx="6" ry="6" width="200" height="36" fill="#111827" />
+    <rect x="0" y="0" width="48" height="36" rx="6" ry="6" fill="#2563eb" />
+    <text x="24" y="22" font-family="Segoe UI, Roboto, Arial" font-size="12" fill="#ffffff" text-anchor="middle">👨‍💻</text>
+    <text x="120" y="22" font-family="Segoe UI, Roboto, Arial" font-size="12" fill="#ffffff" text-anchor="middle">Rahul Raj Singh (CipherNomad)</text>
+  </svg>
+</p>
+
+<br>
+<p align="center"> Made with ❤️ by <b>Rahul Raj Singh</b> </p>
