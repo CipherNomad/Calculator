@@ -166,8 +166,7 @@ Feel free to open an issue or submit a pull request.
 If you find this project useful, please ⭐ **star the repository**.
 Your support motivates further development! 🙌
 
-<br>
-##  📸 Screenshots
+## 📸 Screenshots
 
 <p align="center">
   <img src="images/banner.png" alt="Calculator Banner" width="100%" />
